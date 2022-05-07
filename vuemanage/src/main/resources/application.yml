@@ -1,0 +1,28 @@
+
+
+server:
+  port: 8081
+
+#datasource
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///sp_vue?serverTimezone=UTC
+    username: root
+    password: 1224731x
+
+
+#mybatis:
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml  #mapper 映射文件路径
+  type-aliases-package: com.example.vuemanage.domain  #别名
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  config-location: #用于指定 mybatis 的核心配置文件
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+files:
+  upload:
+    path: G:\BaiduNetdiskDownload\springboot_vue/files/
